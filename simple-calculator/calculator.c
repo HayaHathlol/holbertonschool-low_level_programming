@@ -1,24 +1,24 @@
 #include <stdio.h>
 
+/**
+ * main - Displays a calculator menu
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int choice;
 
-	printf("Welcome to the program!\n");
+	printf("Simple Calculator\n");
+	printf("1) Add\n");
+	printf("2) Subtract\n");
+	printf("3) Multiply\n");
+	printf("4) Divide\n");
+	printf("0) Quit\n");
+	printf("Choice: ");
 
-	do {
-		printf("\nMenu:\n");
-		printf("1. Option 1\n");
-		printf("2. Option 2\n");
-		printf("0. Quit\n");
-		printf("Enter your choice: ");
-
-		if (scanf("%d", &choice) != 1)
-			return (1);
-
-	} while (choice != 0);
-
-	printf("Goodbye!\n");
+	if (scanf("%d", &choice) == 1 && choice == 0)
+		printf("Bye!\n");
 
 	return (0);
 }
